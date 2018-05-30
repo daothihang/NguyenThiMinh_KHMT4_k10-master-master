@@ -18,12 +18,13 @@ namespace NguyenThiMinh_KHMT4_k10
         {
             InitializeComponent();
         }
+        LopBUL lop = new LopBUL();
         HoSoHocSinhBUL myHSHS = new HoSoHocSinhBUL();
         private void HoSoHocSinh_Load(object sender, EventArgs e)
         {
-        
-            cboMaLop.DataSource = myHSHS.LayDanhSachHoSoHocSinh();
-            cboMaLop.DisplayMember = "MaLop";
+
+            cboMaLop.DataSource = lop.LayDsLop();
+            cboMaLop.DisplayMember = "Tenlop";
             cboMaLop.ValueMember = "MaLop";
             dgvHSHS.DataSource = myHSHS.LayDanhSachHoSoHocSinh();
         }
