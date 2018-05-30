@@ -37,6 +37,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPrinter = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.txtTenLop = new System.Windows.Forms.TextBox();
+            this.btnTim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoSoHocSinhBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachHocSinh)).BeginInit();
@@ -95,12 +97,31 @@
             this.btnPrinter.UseVisualStyleBackColor = false;
             this.btnPrinter.Click += new System.EventHandler(this.btnPrinter_Click);
             // 
+            // txtTenLop
+            // 
+            this.txtTenLop.Location = new System.Drawing.Point(143, 32);
+            this.txtTenLop.Name = "txtTenLop";
+            this.txtTenLop.Size = new System.Drawing.Size(100, 20);
+            this.txtTenLop.TabIndex = 5;
+            // 
+            // btnTim
+            // 
+            this.btnTim.Location = new System.Drawing.Point(28, 32);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(75, 23);
+            this.btnTim.TabIndex = 6;
+            this.btnTim.Text = "Tim";
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
+            // 
             // DanhSachHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(843, 341);
+            this.Controls.Add(this.btnTim);
+            this.Controls.Add(this.txtTenLop);
             this.Controls.Add(this.btnPrinter);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -129,5 +150,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnPrinter;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.TextBox txtTenLop;
+        private System.Windows.Forms.Button btnTim;
     }
 }

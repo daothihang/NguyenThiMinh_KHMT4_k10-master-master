@@ -24,13 +24,8 @@ namespace NguyenThiMinh_KHMT4_k10
         LopBUL lopBUL = new LopBUL();
         private void DanhSachHocSinh_Load(object sender, EventArgs e)
         {
-            conn.Open();
-            string sqlSelect = "select  Lop.TenLop,HoSoHocSinh.MaHocSinh,HoSoHocSinh.HoTen,HoSoHocSinh.GioiTinh,HoSoHocSinh.DiaChi,HoSoHocSinh.HoTenBoMe,HoSoHocSinh.SoDienThoai from Lop inner join HoSoHocSinh on Lop.MaLop=HoSoHocSinh.MaLop";
-            SqlCommand cm = new SqlCommand(sqlSelect, conn);
-            DataTable dt = new DataTable();
-            SqlDataReader dr = cm.ExecuteReader();
-            dt.Load(dr);
-            dgvDanhSachHocSinh.DataSource = dt;
+
+            dgvDanhSachHocSinh.DataSource = lopBUL.LayDsLop();
         }
 
         private void dgvDanhSachHocSinh_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -41,6 +36,21 @@ namespace NguyenThiMinh_KHMT4_k10
         private void btnPrinter_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            if (txtTenLop.Text == txtTenLop.Text)
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select  Lop.TenLop,HoSoHocSinh.MaHocSinh,HoSoHocSinh.HoTen,HoSoHocSinh.GioiTinh,HoSoHocSinh.DiaChi,HoSoHocSinh.HoTenBoMe,HoSoHocSinh.SoDienThoai from Lop inner join HoSoHocSinh on Lop.MaLop=HoSoHocSinh.MaLop where TenLop like'" + txtTenLop.Text + "%' ", conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvDanhSachHocSinh.DataSource = dt;
+            }
+            else
+                dgvDanhSachHocSinh.DataSource = lopBUL.LayDsLop();
+            conn.Close();
         }
     }
 }
