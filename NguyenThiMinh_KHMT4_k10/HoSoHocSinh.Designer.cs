@@ -207,6 +207,10 @@
             // cboMaLop
             // 
             this.cboMaLop.FormattingEnabled = true;
+            this.cboMaLop.Items.AddRange(new object[] {
+            "L01",
+            "L02",
+            "L03"});
             this.cboMaLop.Location = new System.Drawing.Point(498, 170);
             this.cboMaLop.Name = "cboMaLop";
             this.cboMaLop.Size = new System.Drawing.Size(178, 21);

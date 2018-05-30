@@ -76,5 +76,16 @@ namespace NguyenThiMinh_KHMT4_k10
             DanhSachHocSinh danhSachHocSinh = new DanhSachHocSinh();
             danhSachHocSinh.Show();
         }
+
+        private void toolStripMenuItem21_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void toolStripMenuItem23_Click(object sender, EventArgs e)
+        {
+            DanhSachGiaoVien danhSachGiaoVien = new DanhSachGiaoVien();
+            danhSachGiaoVien.Show();
+        }
     }
 }

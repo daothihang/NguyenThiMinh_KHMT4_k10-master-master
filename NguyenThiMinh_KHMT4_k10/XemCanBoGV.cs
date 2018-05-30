@@ -22,11 +22,11 @@ namespace NguyenThiMinh_KHMT4_k10
         CanBoGiaoVienBUL CanBoGiaoVienBUL = new CanBoGiaoVienBUL();
         private void btnTim_Click(object sender, EventArgs e)
         {
-            if (cboMCBGV.Text == (string)cboMCBGV.SelectedValue)
+            if (txtMaCBGV.Text == txtMaCBGV.Text)
             {
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings
               ["KETNOIQLHS"].ToString());
-                SqlDataAdapter da = new SqlDataAdapter("select  MaCanBoGiaoVien, HoTen ,DiaChi, SoDienThoai, TaiKhoan, MatKhau, LoaiTaiKhoan from CanBoGiaoVien where MaCanBoGiaoVien like '" + cboMCBGV.Text + "%' ", conn);
+                SqlDataAdapter da = new SqlDataAdapter("select  MaCanBoGiaoVien, HoTen ,DiaChi, SoDienThoai, TaiKhoan, MatKhau, LoaiTaiKhoan from CanBoGiaoVien where MaCanBoGiaoVien like '" + txtMaCBGV.Text + "%' ", conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvHT.DataSource = dt;
@@ -38,9 +38,7 @@ namespace NguyenThiMinh_KHMT4_k10
 
         private void XemCanBoGV_Load(object sender, EventArgs e)
         {
-            cboMCBGV.DataSource = CanBoGiaoVienBUL.LayDsCanBo();
-            cboMCBGV.DisplayMember = "MaCanBoGiaoVien";
-            cboMCBGV.ValueMember = "MaCanBoGiaoVien";
+           
         }
     }
     }

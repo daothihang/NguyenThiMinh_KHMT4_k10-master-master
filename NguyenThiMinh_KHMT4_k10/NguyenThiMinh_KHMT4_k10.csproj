@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DanhSachGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSachGiaoVien.Designer.cs">
+      <DependentUpon>DanhSachGiaoVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="CanBoGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     </Compile>
     <Compile Include="HoSoHocSinh.Designer.cs">
       <DependentUpon>HoSoHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HuongDan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HuongDan.Designer.cs">
+      <DependentUpon>HuongDan.cs</DependentUpon>
     </Compile>
     <Compile Include="Lop.cs">
       <SubType>Form</SubType>
@@ -158,6 +170,9 @@
     <Compile Include="XemHoSoHocSinh.Designer.cs">
       <DependentUpon>XemHoSoHocSinh.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DanhSachGiaoVien.resx">
+      <DependentUpon>DanhSachGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CanBoGiaoVien.resx">
       <DependentUpon>CanBoGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HoSoHocSinh.resx">
       <DependentUpon>HoSoHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuongDan.resx">
+      <DependentUpon>HuongDan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lop.resx">
       <DependentUpon>Lop.cs</DependentUpon>

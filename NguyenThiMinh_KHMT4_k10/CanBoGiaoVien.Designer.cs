@@ -172,6 +172,9 @@
             // cboLoaiTK
             // 
             this.cboLoaiTK.FormattingEnabled = true;
+            this.cboLoaiTK.Items.AddRange(new object[] {
+            "admin",
+            "GV"});
             this.cboLoaiTK.Location = new System.Drawing.Point(512, 101);
             this.cboLoaiTK.Name = "cboLoaiTK";
             this.cboLoaiTK.Size = new System.Drawing.Size(147, 21);
@@ -207,6 +210,7 @@
             this.groupBox1.Size = new System.Drawing.Size(734, 198);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // menuStrip1
             // 

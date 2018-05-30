@@ -20,9 +20,7 @@ namespace NguyenThiMinh_KHMT4_k10
         CanBoGiaoVienBUL myCB = new CanBoGiaoVienBUL();
         private void CanBoGiaoVien_Load(object sender, EventArgs e)
         {
-            cboLoaiTK.DataSource = myCB.LayDsCanBo();
-            cboLoaiTK.DisplayMember = "LoaiTaiKhoan";
-            cboLoaiTK.ValueMember = "LoaiTaiKhoan";
+         
             dgvCBGV.DataSource = myCB.LayDsCanBo();
         }
 
@@ -151,6 +149,11 @@ namespace NguyenThiMinh_KHMT4_k10
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 Application.Exit();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

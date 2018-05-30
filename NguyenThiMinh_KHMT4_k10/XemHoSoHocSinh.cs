@@ -22,9 +22,7 @@ namespace NguyenThiMinh_KHMT4_k10
         HoSoHocSinhBUL myHSHS = new HoSoHocSinhBUL();
         private void XemHoSoHocSinh_Load(object sender, EventArgs e)
         {
-            cboMaLop.DataSource = myHSHS.LayDanhSachHoSoHocSinh();
-            cboMaLop.DisplayMember = "MaLop";
-            cboMaLop.ValueMember = "MaLop";
+       
             
         }
 
@@ -35,11 +33,11 @@ namespace NguyenThiMinh_KHMT4_k10
 
         private void btnTim_Click(object sender, EventArgs e)
         {
-            if (cboMaLop.Text == (string)cboMaLop.SelectedValue)
+            if (txtMaHS.Text == txtMaHS.Text)
             {
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings
               ["KETNOIQLHS"].ToString());
-                SqlDataAdapter da = new SqlDataAdapter("select  MaHocSinh, NgaySinh,GioiTinh, DiaChi, DiemVaoTruong, HoTenBoMe, SoDienThoai, MaLop from HoSoHocSinh where MaLop like '" + cboMaLop.Text + "%' ", conn);
+                SqlDataAdapter da = new SqlDataAdapter("select  MaHocSinh, NgaySinh,GioiTinh, DiaChi, DiemVaoTruong, HoTenBoMe, SoDienThoai, MaLop from HoSoHocSinh where MaHocSinh like '" + txtMaHS.Text + "%' ", conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvHT.DataSource = dt;
