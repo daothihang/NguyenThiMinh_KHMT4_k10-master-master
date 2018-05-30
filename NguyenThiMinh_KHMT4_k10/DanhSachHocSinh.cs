@@ -25,7 +25,6 @@ namespace NguyenThiMinh_KHMT4_k10
         private void DanhSachHocSinh_Load(object sender, EventArgs e)
         {
 
-            dgvDanhSachHocSinh.DataSource = lopBUL.LayDsLop();
         }
 
         private void dgvDanhSachHocSinh_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -33,10 +32,7 @@ namespace NguyenThiMinh_KHMT4_k10
 
         }
 
-        private void btnPrinter_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btnTim_Click(object sender, EventArgs e)
         {
@@ -51,6 +47,20 @@ namespace NguyenThiMinh_KHMT4_k10
             else
                 dgvDanhSachHocSinh.DataSource = lopBUL.LayDsLop();
             conn.Close();
+        }
+        private void btnPrinter_Click(object sender, EventArgs e)
+        {
+            PrintPreviewDialog.Document = PrintDocument;
+            PrintPreviewDialog.ShowDialog();
+        }
+      
+        private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bmp = new Bitmap(this.dgvDanhSachHocSinh.Width,this.dgvDanhSachHocSinh.Height);
+            dgvDanhSachHocSinh.DrawToBitmap(bmp, new Rectangle(0, 0, dgvDanhSachHocSinh.Width, dgvDanhSachHocSinh.Height));
+            e.Graphics.DrawImage(bmp,10,200);
+            e.Graphics.DrawString("Danh sách học sinh", new Font("Arial", 30, FontStyle.Bold), Brushes.Black, new Point(230, 100));
+            
         }
     }
 }
