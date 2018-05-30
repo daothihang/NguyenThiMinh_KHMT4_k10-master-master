@@ -57,9 +57,9 @@
             // 
             this.dgvDanhSachHocSinh.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvDanhSachHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDanhSachHocSinh.Location = new System.Drawing.Point(4, 90);
+            this.dgvDanhSachHocSinh.Location = new System.Drawing.Point(4, 165);
             this.dgvDanhSachHocSinh.Name = "dgvDanhSachHocSinh";
-            this.dgvDanhSachHocSinh.Size = new System.Drawing.Size(835, 247);
+            this.dgvDanhSachHocSinh.Size = new System.Drawing.Size(835, 172);
             this.dgvDanhSachHocSinh.TabIndex = 0;
             this.dgvDanhSachHocSinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachHocSinh_CellContentClick);
             // 
@@ -68,7 +68,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Pristina", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Green;
-            this.label1.Location = new System.Drawing.Point(296, 20);
+            this.label1.Location = new System.Drawing.Point(319, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(257, 46);
             this.label1.TabIndex = 1;
@@ -77,21 +77,21 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(668, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(691, 93);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 37);
+            this.pictureBox1.Size = new System.Drawing.Size(39, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // btnPrinter
             // 
-            this.btnPrinter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPrinter.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrinter.ForeColor = System.Drawing.Color.Red;
-            this.btnPrinter.Location = new System.Drawing.Point(723, 21);
+            this.btnPrinter.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnPrinter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrinter.ForeColor = System.Drawing.Color.White;
+            this.btnPrinter.Location = new System.Drawing.Point(578, 93);
             this.btnPrinter.Name = "btnPrinter";
-            this.btnPrinter.Size = new System.Drawing.Size(116, 37);
+            this.btnPrinter.Size = new System.Drawing.Size(116, 32);
             this.btnPrinter.TabIndex = 4;
             this.btnPrinter.Text = "Printer";
             this.btnPrinter.UseVisualStyleBackColor = false;
@@ -99,19 +99,23 @@
             // 
             // txtTenLop
             // 
-            this.txtTenLop.Location = new System.Drawing.Point(143, 32);
+            this.txtTenLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenLop.Location = new System.Drawing.Point(180, 96);
             this.txtTenLop.Name = "txtTenLop";
-            this.txtTenLop.Size = new System.Drawing.Size(100, 20);
+            this.txtTenLop.Size = new System.Drawing.Size(141, 29);
             this.txtTenLop.TabIndex = 5;
             // 
             // btnTim
             // 
-            this.btnTim.Location = new System.Drawing.Point(28, 32);
+            this.btnTim.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTim.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTim.Location = new System.Drawing.Point(65, 96);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(75, 23);
+            this.btnTim.Size = new System.Drawing.Size(75, 32);
             this.btnTim.TabIndex = 6;
             this.btnTim.Text = "Tim";
-            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.UseVisualStyleBackColor = false;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // DanhSachHocSinh
