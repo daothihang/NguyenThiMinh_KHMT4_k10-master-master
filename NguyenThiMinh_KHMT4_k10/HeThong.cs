@@ -62,5 +62,11 @@ namespace NguyenThiMinh_KHMT4_k10
             if (MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 Application.Exit();
         }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            HuongDan huongDan = new HuongDan();
+            huongDan.Show();
+        }
     }
 }
