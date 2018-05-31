@@ -68,5 +68,11 @@ namespace NguyenThiMinh_KHMT4_k10
             HuongDan huongDan = new HuongDan();
             huongDan.Show();
         }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            TinTuc tinTuc = new TinTuc();
+            tinTuc.Show();
+        }
     }
 }

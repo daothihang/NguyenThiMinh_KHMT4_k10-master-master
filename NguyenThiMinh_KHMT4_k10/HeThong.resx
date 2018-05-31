@@ -10469,7 +10469,7 @@
 </value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 24</value>
+    <value>180, 24</value>
   </data>
   <data name="toolStripMenuItem2.Text" xml:space="preserve">
     <value>Thông tin</value>
@@ -10555,7 +10555,7 @@
 </value>
   </data>
   <data name="toolStripMenuItem5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 24</value>
+    <value>153, 24</value>
   </data>
   <data name="toolStripMenuItem5.Text" xml:space="preserve">
     <value>Hướng dẫn</value>
