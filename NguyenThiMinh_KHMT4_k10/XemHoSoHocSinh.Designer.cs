@@ -90,6 +90,7 @@
             this.Controls.Add(this.btnTim);
             this.ForeColor = System.Drawing.Color.BlueViolet;
             this.Name = "XemHoSoHocSinh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XemHoSoHocSinh";
             this.Load += new System.EventHandler(this.XemHoSoHocSinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHT)).EndInit();

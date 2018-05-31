@@ -24,7 +24,9 @@ namespace NguyenThiMinh_KHMT4_k10
         LopBUL lopBUL = new LopBUL();
         private void DanhSachHocSinh_Load(object sender, EventArgs e)
         {
-
+            cbTenLop.DataSource = lopBUL.LayDsLop();
+            cbTenLop.DisplayMember = "TenLop";
+            cbTenLop.ValueMember = "TenLop";
         }
 
         private void dgvDanhSachHocSinh_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -36,10 +38,10 @@ namespace NguyenThiMinh_KHMT4_k10
 
         private void btnTim_Click(object sender, EventArgs e)
         {
-            if (txtTenLop.Text == txtTenLop.Text)
+            if (cbTenLop.Text == (string)cbTenLop.SelectedValue)
             {
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select  Lop.TenLop,HoSoHocSinh.MaHocSinh,HoSoHocSinh.HoTen,HoSoHocSinh.GioiTinh,HoSoHocSinh.DiaChi,HoSoHocSinh.HoTenBoMe,HoSoHocSinh.SoDienThoai from Lop inner join HoSoHocSinh on Lop.MaLop=HoSoHocSinh.MaLop where TenLop like'" + txtTenLop.Text + "%' ", conn);
+                SqlDataAdapter da = new SqlDataAdapter("select  Lop.TenLop,HoSoHocSinh.MaHocSinh,HoSoHocSinh.HoTen,HoSoHocSinh.GioiTinh,HoSoHocSinh.DiaChi,HoSoHocSinh.HoTenBoMe,HoSoHocSinh.SoDienThoai from Lop inner join HoSoHocSinh on Lop.MaLop=HoSoHocSinh.MaLop where TenLop like'" + cbTenLop.Text + "%' ", conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvDanhSachHocSinh.DataSource = dt;
@@ -52,13 +54,14 @@ namespace NguyenThiMinh_KHMT4_k10
         {
             PrintPreviewDialog.Document = PrintDocument;
             PrintPreviewDialog.ShowDialog();
+           
         }
       
         private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             Bitmap bmp = new Bitmap(this.dgvDanhSachHocSinh.Width,this.dgvDanhSachHocSinh.Height);
             dgvDanhSachHocSinh.DrawToBitmap(bmp, new Rectangle(0, 0, dgvDanhSachHocSinh.Width, dgvDanhSachHocSinh.Height));
-            e.Graphics.DrawImage(bmp,10,200);
+            e.Graphics.DrawImage(bmp,50,200);
             e.Graphics.DrawString("Danh sách học sinh", new Font("Arial", 30, FontStyle.Bold), Brushes.Black, new Point(230, 100));
             
         }

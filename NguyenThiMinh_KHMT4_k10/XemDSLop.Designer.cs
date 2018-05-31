@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XemDSLop));
             this.dgvDSLop = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaLop = new System.Windows.Forms.TextBox();
@@ -68,7 +67,7 @@
             // 
             // btnTimMa
             // 
-            this.btnTimMa.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnTimMa.BackColor = System.Drawing.SystemColors.Desktop;
             this.btnTimMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimMa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTimMa.Location = new System.Drawing.Point(68, 22);
@@ -81,7 +80,7 @@
             // 
             // btnTimTen
             // 
-            this.btnTimTen.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnTimTen.BackColor = System.Drawing.SystemColors.Desktop;
             this.btnTimTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimTen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTimTen.Location = new System.Drawing.Point(288, 22);
@@ -114,8 +113,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(383, 280);
+            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ClientSize = new System.Drawing.Size(376, 274);
             this.Controls.Add(this.cbTen);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnTimTen);
@@ -124,6 +123,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvDSLop);
             this.Name = "XemDSLop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XemDSLop";
             this.Load += new System.EventHandler(this.XemDSLop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSLop)).EndInit();

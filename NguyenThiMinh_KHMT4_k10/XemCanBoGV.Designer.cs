@@ -87,6 +87,7 @@
             this.Controls.Add(this.dgvHT);
             this.Controls.Add(this.btnTim);
             this.Name = "XemCanBoGV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XemCanBoGV";
             this.Load += new System.EventHandler(this.XemCanBoGV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHT)).EndInit();

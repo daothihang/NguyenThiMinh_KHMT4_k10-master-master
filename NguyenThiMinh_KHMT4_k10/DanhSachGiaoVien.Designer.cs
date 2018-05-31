@@ -118,6 +118,7 @@
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.label1);
             this.Name = "DanhSachGiaoVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DanhSachGiaoVien ";
             this.Load += new System.EventHandler(this._1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHT)).EndInit();

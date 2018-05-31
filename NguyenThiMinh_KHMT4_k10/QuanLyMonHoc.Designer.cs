@@ -49,9 +49,9 @@
             this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.btnXem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnHuy = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLuu = new System.Windows.Forms.ToolStripMenuItem();
             this.monHocTableAdapter = new NguyenThiMinh_KHMT4_k10.QuanLyHocSinhDataSet2TableAdapters.MonHocTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLuu = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monHocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyHocSinhDataSet2)).BeginInit();
@@ -228,6 +228,15 @@
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.hủyToolStripMenuItem_Click);
             // 
+            // btnLuu
+            // 
+            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(55, 26);
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.lưuToolStripMenuItem_Click);
+            // 
             // monHocTableAdapter
             // 
             this.monHocTableAdapter.ClearBeforeFill = true;
@@ -242,15 +251,6 @@
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // btnLuu
-            // 
-            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(55, 26);
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.Click += new System.EventHandler(this.lưuToolStripMenuItem_Click);
-            // 
             // QuanLyMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,6 +263,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "QuanLyMonHoc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLyMonHoc";
             this.Load += new System.EventHandler(this.QuanLyMonHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).EndInit();

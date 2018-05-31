@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XemDSMonHoc));
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaMon = new System.Windows.Forms.TextBox();
             this.btnTimMa = new System.Windows.Forms.Button();
@@ -58,7 +57,7 @@
             // 
             // btnTimMa
             // 
-            this.btnTimMa.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnTimMa.BackColor = System.Drawing.SystemColors.Desktop;
             this.btnTimMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimMa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTimMa.Location = new System.Drawing.Point(85, 17);
@@ -81,7 +80,7 @@
             // 
             // btnTimTen
             // 
-            this.btnTimTen.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnTimTen.BackColor = System.Drawing.SystemColors.Desktop;
             this.btnTimTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimTen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTimTen.Location = new System.Drawing.Point(316, 18);
@@ -114,7 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(429, 285);
             this.Controls.Add(this.dgvDSMonHoc);
             this.Controls.Add(this.cbTenMon);
@@ -124,6 +123,7 @@
             this.Controls.Add(this.txtMaMon);
             this.Controls.Add(this.label1);
             this.Name = "XemDSMonHoc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XemDSMonHoc";
             this.Load += new System.EventHandler(this.XemDSMonHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSMonHoc)).EndInit();
