@@ -263,7 +263,7 @@
             this.giaoVienChuNhiemDataGridViewTextBoxColumn});
             this.dgvLop.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgvLop.DataSource = this.lopBindingSource;
-            this.dgvLop.Location = new System.Drawing.Point(180, 144);
+            this.dgvLop.Location = new System.Drawing.Point(181, 145);
             this.dgvLop.Name = "dgvLop";
             this.dgvLop.Size = new System.Drawing.Size(554, 218);
             this.dgvLop.TabIndex = 2;

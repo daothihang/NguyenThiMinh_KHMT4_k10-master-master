@@ -39,7 +39,7 @@
             // 
             this.btnTim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnTim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTim.Location = new System.Drawing.Point(475, 38);
+            this.btnTim.Location = new System.Drawing.Point(436, 38);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(75, 30);
             this.btnTim.TabIndex = 0;
@@ -60,7 +60,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(92, 48);
+            this.label1.Location = new System.Drawing.Point(68, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 19);
             this.label1.TabIndex = 3;
@@ -70,7 +70,7 @@
             // 
             this.txtMaCBGV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtMaCBGV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaCBGV.Location = new System.Drawing.Point(275, 38);
+            this.txtMaCBGV.Location = new System.Drawing.Point(234, 38);
             this.txtMaCBGV.Multiline = true;
             this.txtMaCBGV.Name = "txtMaCBGV";
             this.txtMaCBGV.Size = new System.Drawing.Size(144, 30);

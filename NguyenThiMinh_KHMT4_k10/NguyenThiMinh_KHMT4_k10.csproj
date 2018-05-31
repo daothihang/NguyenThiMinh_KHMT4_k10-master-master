@@ -146,6 +146,12 @@
     <Compile Include="QuanLyMonHoc.Designer.cs">
       <DependentUpon>QuanLyMonHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="TinTuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TinTuc.Designer.cs">
+      <DependentUpon>TinTuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="XemCanBoGV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyMonHoc.resx">
       <DependentUpon>QuanLyMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TinTuc.resx">
+      <DependentUpon>TinTuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XemCanBoGV.resx">
       <DependentUpon>XemCanBoGV.cs</DependentUpon>

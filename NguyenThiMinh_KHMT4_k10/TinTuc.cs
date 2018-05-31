@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace NguyenThiMinh_KHMT4_k10
 {
-    public partial class HuongDan : Form
+    public partial class TinTuc : Form
     {
-        public HuongDan()
+        public TinTuc()
         {
             InitializeComponent();
         }
 
-        private void HuongDan_Load(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
 
         }

@@ -43,7 +43,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(63, 22);
+            this.label1.Location = new System.Drawing.Point(66, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 19);
             this.label1.TabIndex = 0;
@@ -51,9 +51,9 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnPrint.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Location = new System.Drawing.Point(499, 14);
+            this.btnPrint.Location = new System.Drawing.Point(501, 32);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(75, 35);
             this.btnPrint.TabIndex = 1;
@@ -63,10 +63,10 @@
             // 
             // cboTenLop
             // 
-            this.cboTenLop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.cboTenLop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.cboTenLop.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTenLop.FormattingEnabled = true;
-            this.cboTenLop.Location = new System.Drawing.Point(163, 22);
+            this.cboTenLop.Location = new System.Drawing.Point(150, 38);
             this.cboTenLop.Name = "cboTenLop";
             this.cboTenLop.Size = new System.Drawing.Size(121, 25);
             this.cboTenLop.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             this.dgvHT.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvHT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHT.Location = new System.Drawing.Point(26, 84);
+            this.dgvHT.Location = new System.Drawing.Point(32, 85);
             this.dgvHT.Name = "dgvHT";
             this.dgvHT.Size = new System.Drawing.Size(584, 101);
             this.dgvHT.TabIndex = 3;
@@ -96,9 +96,9 @@
             // 
             // btnLap
             // 
-            this.btnLap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnLap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnLap.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLap.Location = new System.Drawing.Point(334, 14);
+            this.btnLap.Location = new System.Drawing.Point(355, 32);
             this.btnLap.Name = "btnLap";
             this.btnLap.Size = new System.Drawing.Size(131, 35);
             this.btnLap.TabIndex = 4;
@@ -110,8 +110,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(645, 220);
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(645, 206);
             this.Controls.Add(this.btnLap);
             this.Controls.Add(this.dgvHT);
             this.Controls.Add(this.cboTenLop);
