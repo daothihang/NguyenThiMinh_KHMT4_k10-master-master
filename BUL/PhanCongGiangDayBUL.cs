@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using DAL;
+using System.Data;
+
 namespace BUL
 {
     public class PhanCongGiangDayBUL
@@ -25,6 +27,11 @@ namespace BUL
         public void sua(PhanCongGiangDayDTO dto)
         {
             myPhanCongDAL.sua(dto);
+        }
+        public DataTable DSPhanCongGiangDay(string TenLop)
+        {
+            DataTable dt = myPhanCongDAL.DSPhanCongGiangDay(TenLop);
+            return dt;
         }
     }
 }

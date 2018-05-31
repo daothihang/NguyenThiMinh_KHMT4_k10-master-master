@@ -33,5 +33,10 @@ namespace BUL
             return myCB.Xoa(MaCanBoGiaoVien);
 
         }
+        public DataTable TimKiem(string MaCanBoGiaoVien)
+        {
+            DataTable dt = myCB.TimKiem(MaCanBoGiaoVien);
+            return dt;
+        }
     }
 }

@@ -24,11 +24,9 @@ namespace NguyenThiMinh_KHMT4_k10
         {
             if (txtMaCBGV.Text == txtMaCBGV.Text)
             {
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings
-              ["KETNOIQLHS"].ToString());
-                SqlDataAdapter da = new SqlDataAdapter("select  MaCanBoGiaoVien, HoTen ,DiaChi, SoDienThoai, TaiKhoan, MatKhau, LoaiTaiKhoan from CanBoGiaoVien where MaCanBoGiaoVien like '" + txtMaCBGV.Text + "%' ", conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                CanBoGiaoVienBUL cb = new CanBoGiaoVienBUL();
+                string MaCanBoGiaoVien = txtMaCBGV.Text;
+                DataTable dt = cb.TimKiem(MaCanBoGiaoVien);
                 dgvHT.DataSource = dt;
             }
             else

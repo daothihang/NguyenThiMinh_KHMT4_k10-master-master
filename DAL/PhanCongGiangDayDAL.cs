@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -64,6 +65,16 @@ namespace DAL
             cmd.ExecuteNonQuery();
             KetNoiCoSoDuLieu.DongKetNoi();
 
+        }
+        public DataTable DSPhanCongGiangDay(string TenLop)
+        {
+            DataTable dt = new DataTable();
+            KetNoiCoSoDuLieu.MoKetNoi();
+            String sqlFind = string.Format("select CanBoGiaoVien.MaCanBoGiaoVien, CanBoGiaoVien.HoTen, CanBoGiaoVien.SoDienthoai, MonHoc.TenMon, PhanCongGiangDay.NgayPhanCong from PhanCongGiangDay inner join CanBoGiaoVien on PhanCongGiangDay.MaCanBoGiaoVien= CanBoGiaoVien.MaCanBoGiaoVien inner join MonHoc on PhanCongGiangDay.MaMon= MonHoc.MaMon inner join Lop on PhanCongGiangDay.MaLop= Lop.MaLop where TenLop like'" +TenLop + "%' ");
+            SqlDataAdapter da = new SqlDataAdapter(sqlFind, KetNoiCoSoDuLieu.KetNoi);
+            da.Fill(dt);
+            KetNoiCoSoDuLieu.DongKetNoi();
+            return dt;
         }
     }
 }

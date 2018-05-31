@@ -120,5 +120,16 @@ namespace DAL
             }
             return false;
         }
+        public DataTable TimKiem(string MaHocSinh)
+        {
+            DataTable dt = new DataTable();
+            KetNoiCoSoDuLieu.MoKetNoi();
+            String sqlFind = string.Format("select  MaHocSinh, NgaySinh,GioiTinh, DiaChi, DiemVaoTruong, HoTenBoMe, SoDienThoai, MaLop from HoSoHocSinh where MaHocSinh like '" + MaHocSinh + "%' ");
+            SqlDataAdapter da = new SqlDataAdapter(sqlFind, KetNoiCoSoDuLieu.KetNoi);
+            da.Fill(dt);
+            KetNoiCoSoDuLieu.DongKetNoi();
+            return dt;
+
+        }
     }
 }

@@ -31,23 +31,15 @@ namespace NguyenThiMinh_KHMT4_k10
 
         private void btnLap_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings
-           ["KETNOIQLHS"].ToString());
-
             if (cboTenLop.Text == (string)cboTenLop.SelectedValue)
             {
-
-                conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select CanBoGiaoVien.MaCanBoGiaoVien, CanBoGiaoVien.HoTen, CanBoGiaoVien.SoDienthoai, MonHoc.TenMon, PhanCongGiangDay.NgayPhanCong from PhanCongGiangDay inner join CanBoGiaoVien on PhanCongGiangDay.MaCanBoGiaoVien= CanBoGiaoVien.MaCanBoGiaoVien inner join MonHoc on PhanCongGiangDay.MaMon= MonHoc.MaMon inner join Lop on PhanCongGiangDay.MaLop= Lop.MaLop where TenLop like'" + cboTenLop.Text + "%' ", conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                PhanCongGiangDayBUL phanCongGiangDayBUL = new PhanCongGiangDayBUL();
+                string TenLop = cboTenLop.Text;
+                DataTable dt = phanCongGiangDayBUL.DSPhanCongGiangDay(TenLop);
                 dgvHT.DataSource = dt;
+
             }
-            else if (cboTenLop.Text == "")
-            {
-                dgvHT.DataSource = pcgd.LayDanhSachPhanCongGiangDay();
-            }
-            conn.Close();
+
         }
 
         private void btnPrint_Click(object sender, EventArgs e)

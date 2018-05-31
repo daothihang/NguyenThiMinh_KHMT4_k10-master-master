@@ -32,8 +32,6 @@ namespace NguyenThiMinh_KHMT4_k10
 
         }
 
-      
-
         private void btnTim_Click(object sender, EventArgs e)
         {
             if (cbTenLop.Text == (string)cbTenLop.SelectedValue)

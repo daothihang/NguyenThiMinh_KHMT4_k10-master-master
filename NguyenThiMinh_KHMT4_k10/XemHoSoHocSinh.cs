@@ -35,11 +35,9 @@ namespace NguyenThiMinh_KHMT4_k10
         {
             if (txtMaHS.Text == txtMaHS.Text)
             {
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings
-              ["KETNOIQLHS"].ToString());
-                SqlDataAdapter da = new SqlDataAdapter("select  MaHocSinh, NgaySinh,GioiTinh, DiaChi, DiemVaoTruong, HoTenBoMe, SoDienThoai, MaLop from HoSoHocSinh where MaHocSinh like '" + txtMaHS.Text + "%' ", conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                HoSoHocSinhBUL hoSoHocSinhBUL = new HoSoHocSinhBUL();
+                string MaHocSinh = txtMaHS.Text;
+                DataTable dt = hoSoHocSinhBUL.TimKiem(MaHocSinh);
                 dgvHT.DataSource = dt;
             }
             else
