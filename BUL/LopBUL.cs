@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,5 +28,26 @@ namespace BUL
             return myLop.Xoa(MaLop);
         }
 
+        public DataTable TimKiem(string MaLop)
+        {
+            DataTable dt = myLop.TimKiem(MaLop);
+            return dt;
+        }
+
+        public DataTable TimKiem(object maLop)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DataTable TimKiem1(string TenLop)
+        {
+            DataTable dt = myLop.TimKiem1(TenLop);
+            return dt;
+        }
+        public DataTable DanhSachHocSinh(string TenLop)
+        {
+            DataTable dt = myLop.DanhSachHocSinh(TenLop);
+            return dt;
+        }
     }
 }

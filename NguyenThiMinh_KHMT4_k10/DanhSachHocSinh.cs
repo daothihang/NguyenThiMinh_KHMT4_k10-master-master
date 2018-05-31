@@ -19,8 +19,6 @@ namespace NguyenThiMinh_KHMT4_k10
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings
-            ["KETNOIQLHS"].ToString());
         LopBUL lopBUL = new LopBUL();
         private void DanhSachHocSinh_Load(object sender, EventArgs e)
         {
@@ -40,15 +38,12 @@ namespace NguyenThiMinh_KHMT4_k10
         {
             if (cbTenLop.Text == (string)cbTenLop.SelectedValue)
             {
-                conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select  Lop.TenLop,HoSoHocSinh.MaHocSinh,HoSoHocSinh.HoTen,HoSoHocSinh.GioiTinh,HoSoHocSinh.DiaChi,HoSoHocSinh.HoTenBoMe,HoSoHocSinh.SoDienThoai from Lop inner join HoSoHocSinh on Lop.MaLop=HoSoHocSinh.MaLop where TenLop like'" + cbTenLop.Text + "%' ", conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                LopBUL lp = new LopBUL();
+                string TenLop = cbTenLop.Text;
+                DataTable dt = lp.DanhSachHocSinh(TenLop);
                 dgvDanhSachHocSinh.DataSource = dt;
             }
-            else
-                dgvDanhSachHocSinh.DataSource = lopBUL.LayDsLop();
-            conn.Close();
+      
         }
         private void btnPrinter_Click(object sender, EventArgs e)
         {

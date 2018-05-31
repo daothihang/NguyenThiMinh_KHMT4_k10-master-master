@@ -102,6 +102,27 @@ namespace DAL
             }
             return false;
         }
-       
+
+        public DataTable TimKiem(string MaMon)
+        {
+            DataTable dt = new DataTable();
+            KetNoiCoSoDuLieu.MoKetNoi();
+            String sqlFind = string.Format("select  MaMon,TenMon,SoTiet from MonHoc where  MaMon like '" + MaMon + "%' ");
+            SqlDataAdapter da = new SqlDataAdapter(sqlFind, KetNoiCoSoDuLieu.KetNoi);
+            da.Fill(dt);
+            KetNoiCoSoDuLieu.DongKetNoi();
+            return dt;
+        }
+        public DataTable TimKiem1(string TenMon)
+        {
+            DataTable dt = new DataTable();
+            KetNoiCoSoDuLieu.MoKetNoi();
+            String sqlFind = string.Format("select  MaMon,TenMon,SoTiet from MonHoc where  TenMon like '" + TenMon + "%' ");
+            SqlDataAdapter da = new SqlDataAdapter(sqlFind, KetNoiCoSoDuLieu.KetNoi);
+            da.Fill(dt);
+            KetNoiCoSoDuLieu.DongKetNoi();
+            return dt;
+        }
+
     }
 }

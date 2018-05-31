@@ -19,8 +19,6 @@ namespace NguyenThiMinh_KHMT4_k10
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings
-             ["KETNOIQLHS"].ToString());
         MonHocBUL myMonHoc = new MonHocBUL();
         private void XemDSMonHoc_Load(object sender, EventArgs e)
         {
@@ -34,15 +32,11 @@ namespace NguyenThiMinh_KHMT4_k10
         {
             if (txtMaMon.Text == txtMaMon.Text)
             {
-                conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select  MaMon,TenMon,SoTiet from MonHoc where  MaMon like '" + txtMaMon.Text + "%' ", conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                MonHocBUL monHoc = new MonHocBUL();
+                string MaMon = txtMaMon.Text;
+                DataTable dt = monHoc.TimKiem(MaMon);
                 dgvDSMonHoc.DataSource = dt;
             }
-            else
-                dgvDSMonHoc.DataSource = myMonHoc.LayDanhSachMonHoc();
-            conn.Close();
             
         }
 
@@ -50,15 +44,14 @@ namespace NguyenThiMinh_KHMT4_k10
         {
             if (cbTenMon.Text == (string)cbTenMon.SelectedValue)
             {
-                conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select  MaMon,TenMon,SoTiet from MonHoc where  TenMon like '" + cbTenMon.Text + "%' ", conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                MonHocBUL monHoc = new MonHocBUL();
+                string TenMon = cbTenMon.Text;
+                DataTable dt = monHoc.TimKiem1(TenMon);
                 dgvDSMonHoc.DataSource = dt;
+
             }
             else
                 dgvDSMonHoc.DataSource = myMonHoc.LayDanhSachMonHoc();
-            conn.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

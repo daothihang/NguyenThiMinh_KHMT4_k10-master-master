@@ -31,8 +31,17 @@ namespace BUL
             return myMonHoc.Xoa(MaMon);
 
         }
-        
+        public DataTable TimKiem(string MaMon)
+        {
+            DataTable dt = myMonHoc.TimKiem(MaMon);
+            return dt;
+        }
 
+        public DataTable TimKiem1(string TenMon)
+        {
+            DataTable dt = myMonHoc.TimKiem1(TenMon);
+            return dt;
+        }
 
     }
 }

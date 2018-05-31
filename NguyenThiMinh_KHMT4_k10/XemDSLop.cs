@@ -20,8 +20,6 @@ namespace NguyenThiMinh_KHMT4_k10
             InitializeComponent();
         }
 
-        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings
-             ["KETNOIQLHS"].ToString());
         LopBUL myLopBUL = new LopBUL();
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -35,37 +33,33 @@ namespace NguyenThiMinh_KHMT4_k10
             cbTen.DisplayMember = "TenLop";
             cbTen.ValueMember = "TenLop";
             dgvDSLop.DataSource = myLopBUL.LayDsLop();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (txtMaLop.Text == txtMaLop.Text)
             {
-                conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select MaLop,TenLop,NienKhoa,SiSo,GiaoVienChuNhiem from Lop where  MaLop like '" + txtMaLop.Text + "%' ", conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                LopBUL lp = new LopBUL();
+                string MaLop = txtMaLop.Text;
+                DataTable dt = lp.TimKiem(MaLop);
                 dgvDSLop.DataSource = dt;
             }
-            else
-                dgvDSLop.DataSource = myLopBUL.LayDsLop();
-            conn.Close();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             if (cbTen.Text == (string)cbTen.SelectedValue)
             {
-                conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select  MaLop,TenLop,NienKhoa,SiSo,GiaoVienChuNhiem from Lop where  TenLop like '" + cbTen.Text + "%' ", conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                LopBUL lp = new LopBUL();
+                string TenLop = cbTen.Text;
+                DataTable dt = lp.TimKiem1(TenLop);
                 dgvDSLop.DataSource = dt;
             }
             else
                 dgvDSLop.DataSource = myLopBUL.LayDsLop();
-            txtMaLop.Clear();
-            conn.Close();
+                txtMaLop.Clear();
         }
     }
 }
