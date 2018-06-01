@@ -60,5 +60,10 @@ namespace NguyenThiMinh_KHMT4_k10
             myPhanCong.phanCong(cblop.Text, cbmon.Text, cbgv.Text, datephancong.Text);
             hienthi();
         }
+
+        private void btnxem_Click(object sender, EventArgs e)
+        {
+            //dgv.DataSource=myPhanCong.xemds((String)cblop.SelectedValue,(String)cbmon.SelectedValue
+        }
     }
 }

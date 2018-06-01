@@ -15,6 +15,7 @@ namespace NguyenThiMinh_KHMT4_k10
         public FormGiaoVien()
         {
             InitializeComponent();
+           
         }
     }
 }

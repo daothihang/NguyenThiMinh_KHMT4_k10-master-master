@@ -373,6 +373,7 @@
             this.btnxem.TabIndex = 16;
             this.btnxem.Text = "Xem Danh Sách";
             this.btnxem.UseVisualStyleBackColor = false;
+            this.btnxem.Click += new System.EventHandler(this.btnxem_Click);
             // 
             // btnthoat
             // 

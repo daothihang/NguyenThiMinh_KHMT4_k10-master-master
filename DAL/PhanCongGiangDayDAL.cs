@@ -76,5 +76,35 @@ namespace DAL
             KetNoiCoSoDuLieu.DongKetNoi();
             return dt;
         }
+
+        public List<PhanCongGiangDayDTO> xemph(string malop,string mamon,string macbgv)
+        {
+            List<PhanCongGiangDayDTO> xem = new List<PhanCongGiangDayDTO>();
+            KetNoiCoSoDuLieu.MoKetNoi();
+
+          
+
+            String sqlFind = "select *form PhanCongGiangDay where MaLop=@malop or MaMon=@mamon or MaCanBoGiaoVien=@macbgv";
+            SqlCommand cmd = new SqlCommand(sqlFind, KetNoiCoSoDuLieu.KetNoi);
+            cmd.Parameters.AddWithValue("malop", malop);
+            cmd.Parameters.AddWithValue("mamon", mamon);
+            cmd.Parameters.AddWithValue("macbgv", macbgv);
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+
+                PhanCongGiangDayDTO pcgd = new PhanCongGiangDayDTO(
+                     dr["MaLop"].ToString(),
+                     dr["MaMon"].ToString(),
+                     dr["MaCanBoGiaoVien"].ToString(),
+                     dr["NgayPhanCong"].ToString());
+                xem.Add(pcgd);
+            }
+
+            KetNoiCoSoDuLieu.DongKetNoi();
+            return xem;
+        }
+
     }
 }

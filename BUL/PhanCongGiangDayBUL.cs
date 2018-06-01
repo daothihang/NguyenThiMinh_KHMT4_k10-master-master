@@ -33,5 +33,10 @@ namespace BUL
             DataTable dt = myPhanCongDAL.DSPhanCongGiangDay(TenLop);
             return dt;
         }
+
+        public List<PhanCongGiangDayDTO> xemds(String malop,String mamon,String macbgv)
+        {
+            return myPhanCongDAL.xemph(malop,mamon,macbgv);
+        }
     }
 }
