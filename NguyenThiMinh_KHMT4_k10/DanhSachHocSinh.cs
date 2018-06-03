@@ -25,6 +25,8 @@ namespace NguyenThiMinh_KHMT4_k10
             cbTenLop.DataSource = lopBUL.LayDsLop();
             cbTenLop.DisplayMember = "TenLop";
             cbTenLop.ValueMember = "TenLop";
+           
+
         }
 
         private void dgvDanhSachHocSinh_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -40,6 +42,24 @@ namespace NguyenThiMinh_KHMT4_k10
                 string TenLop = cbTenLop.Text;
                 DataTable dt = lp.DanhSachHocSinh(TenLop);
                 dgvDanhSachHocSinh.DataSource = dt;
+                dgvDanhSachHocSinh.Columns[0].HeaderText = "TenLop";
+                dgvDanhSachHocSinh.Columns[0].Width = 100;
+                dgvDanhSachHocSinh.Columns[1].HeaderText = "MaHocSinh";
+                dgvDanhSachHocSinh.Columns[1].Width = 100;
+                dgvDanhSachHocSinh.Columns[2].HeaderText = "HoTen";
+                dgvDanhSachHocSinh.Columns[2].Width = 100;
+                dgvDanhSachHocSinh.Columns[3].HeaderText = "GioiTinh";
+                dgvDanhSachHocSinh.Columns[3].Width = 100;
+                dgvDanhSachHocSinh.Columns[4].HeaderText = "DiaChi";
+                dgvDanhSachHocSinh.Columns[4].Width = 100;
+                dgvDanhSachHocSinh.Columns[5].HeaderText = "HoTenBoMe";
+                dgvDanhSachHocSinh.Columns[5].Width = 100;
+                dgvDanhSachHocSinh.Columns[6].HeaderText = "SoDienThoai";
+                dgvDanhSachHocSinh.Columns[6].Width = 100;
+               
+
+               
+
             }
       
         }

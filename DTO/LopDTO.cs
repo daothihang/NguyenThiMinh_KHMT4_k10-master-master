@@ -13,6 +13,7 @@ namespace DTO
         public int SiSo { get; set; }
         public string NiemKhoa { get; set; }
         public string GiaoVienChuNhiem { get; set; }
+       
    
         public LopDTO() { }
 
@@ -23,6 +24,7 @@ namespace DTO
             this.SiSo = siso;
             this.NiemKhoa = niemkhoa;
             this.GiaoVienChuNhiem = gvcn;
+
 
 
         }
