@@ -81,9 +81,6 @@ namespace DAL
         {
             List<PhanCongGiangDayDTO> xem = new List<PhanCongGiangDayDTO>();
             KetNoiCoSoDuLieu.MoKetNoi();
-
-          
-
             String sqlFind = "select *form PhanCongGiangDay where MaLop=@malop or MaMon=@mamon or MaCanBoGiaoVien=@macbgv";
             SqlCommand cmd = new SqlCommand(sqlFind, KetNoiCoSoDuLieu.KetNoi);
             cmd.Parameters.AddWithValue("malop", malop);
@@ -93,7 +90,6 @@ namespace DAL
 
             while (dr.Read())
             {
-
                 PhanCongGiangDayDTO pcgd = new PhanCongGiangDayDTO(
                      dr["MaLop"].ToString(),
                      dr["MaMon"].ToString(),
