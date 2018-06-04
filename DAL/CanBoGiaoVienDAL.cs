@@ -136,5 +136,32 @@ namespace DAL
             KetNoiCoSoDuLieu.DongKetNoi();
             return dt;
         }
+        public DataTable doimk(String taikhoan2, String mkcu)
+        {
+
+            KetNoiCoSoDuLieu.MoKetNoi();
+            SqlDataAdapter ASDF = new SqlDataAdapter("SELECT COUNT(*) FROM CanBoGiaoVien WHERE TaiKhoan='" + taikhoan2 + "' AND MatKhau='" + mkcu + "'", KetNoiCoSoDuLieu.KetNoi);
+            DataTable dt = new DataTable();
+            ASDF.Fill(dt);
+            KetNoiCoSoDuLieu.DongKetNoi();
+            return dt;
+        }
+
+        public void thaydoimk(String mkmoi, String tk2, String mkcu)
+        {
+            KetNoiCoSoDuLieu.MoKetNoi();
+            String cc = "UPDATE CanBoGiaoVien SET MatKhau=@mkmoi WHERE TaiKhoan=@tk2 AND MatKhau=@mkcu";
+
+
+            SqlCommand cmd = new SqlCommand(cc, KetNoiCoSoDuLieu.KetNoi);
+
+            cmd.Parameters.AddWithValue("mkmoi", mkmoi);
+            cmd.Parameters.AddWithValue("tk2", tk2);
+            cmd.Parameters.AddWithValue("mkcu", mkcu);
+
+
+            cmd.ExecuteNonQuery();
+            KetNoiCoSoDuLieu.DongKetNoi();
+        }
     }
 }

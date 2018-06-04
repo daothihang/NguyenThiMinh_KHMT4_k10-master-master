@@ -38,5 +38,15 @@ namespace BUL
             DataTable dt = myCB.TimKiem(MaCanBoGiaoVien);
             return dt;
         }
+
+        public DataTable ChangeMK(String tkcu, String mkcu)
+        {
+            return myCB.doimk(tkcu, mkcu);
+        }
+
+        public void ChangingMK(String mkmoi, String tk2, String mkcu)
+        {
+            myCB.thaydoimk(mkmoi, tk2, mkcu);
+        }
     }
 }

@@ -76,6 +76,12 @@
     <Compile Include="DanhSachHocSinh.Designer.cs">
       <DependentUpon>DanhSachHocSinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doi_MK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doi_MK.Designer.cs">
+      <DependentUpon>Doi_MK.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhSachHocSinh.resx">
       <DependentUpon>DanhSachHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doi_MK.resx">
+      <DependentUpon>Doi_MK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
