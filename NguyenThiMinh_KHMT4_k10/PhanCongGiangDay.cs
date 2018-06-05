@@ -111,7 +111,8 @@ namespace NguyenThiMinh_KHMT4_k10
 
         private void họcSinhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            XemHoSoHocSinh hs = new XemHoSoHocSinh();
+            hs.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -119,6 +120,49 @@ namespace NguyenThiMinh_KHMT4_k10
             cbgv.SelectedIndex = -1;
             cbmon.SelectedIndex = -1;
             cblop.SelectedIndex = -1;
+        }
+
+        private void toolStripMenuItem14_Click(object sender, EventArgs e)
+        {
+            HoSoHocSinh hoSoHocSinh = new HoSoHocSinh();
+            hoSoHocSinh.Show();
+        }
+
+        private void toolStripMenuItem15_Click(object sender, EventArgs e)
+        {
+            QuanLyMonHoc quanLyMonHoc = new QuanLyMonHoc();
+            quanLyMonHoc.Show();
+        }
+
+        private void toolStripMenuItem16_Click(object sender, EventArgs e)
+        {
+            Lop lop = new Lop();
+            lop.Show();
+        }
+
+        private void toolStripMenuItem17_Click(object sender, EventArgs e)
+        {
+            CanBoGiaoVien canBoGiaoVien = new CanBoGiaoVien();
+            canBoGiaoVien.Show();
+        }
+
+        private void toolStripMenuItem22_Click(object sender, EventArgs e)
+        {
+
+            DanhSachHocSinh danhSachHocSinh = new DanhSachHocSinh();
+            danhSachHocSinh.Show();
+        }
+
+        private void toolStripMenuItem23_Click(object sender, EventArgs e)
+        {
+            DanhSachGiaoVien danhSachGiaoVien = new DanhSachGiaoVien();
+            danhSachGiaoVien.Show();
+        }
+
+        private void giáoViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            XemCanBoGV cbgv = new XemCanBoGV();
+            cbgv.Show();
         }
     }
 }

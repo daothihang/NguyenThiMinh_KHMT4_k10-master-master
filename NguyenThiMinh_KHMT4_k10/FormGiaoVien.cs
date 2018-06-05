@@ -12,10 +12,16 @@ namespace NguyenThiMinh_KHMT4_k10
 {
     public partial class FormGiaoVien : Form
     {
-        public FormGiaoVien()
+        public FormGiaoVien(String tengv)
         {
             InitializeComponent();
+            label1.Text = tengv;
            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

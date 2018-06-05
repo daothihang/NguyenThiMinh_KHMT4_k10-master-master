@@ -48,5 +48,11 @@ namespace BUL
         {
             myCB.thaydoimk(mkmoi, tk2, mkcu);
         }
+
+
+        public DataTable LayLoaiTK()
+        {
+            return myCB.LayLoaiTK();
+        }
     }
 }

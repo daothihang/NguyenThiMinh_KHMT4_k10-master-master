@@ -163,5 +163,18 @@ namespace DAL
             cmd.ExecuteNonQuery();
             KetNoiCoSoDuLieu.DongKetNoi();
         }
+
+
+        public DataTable LayLoaiTK()
+        {
+            KetNoiCoSoDuLieu.MoKetNoi();
+            DataTable dt = new DataTable();
+            String sql = "SELECT DISTINCT LoaiTaiKhoan FROM CanBoGiaoVien ORDER BY LoaiTaiKhoan ";
+            SqlDataAdapter da = new SqlDataAdapter(sql, KetNoiCoSoDuLieu.KetNoi);
+            da.Fill(dt);
+            KetNoiCoSoDuLieu.DongKetNoi();
+            return dt;
+      
+        }
     }
 }

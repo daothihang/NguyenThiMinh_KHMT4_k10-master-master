@@ -99,6 +99,7 @@
             this.label4.Size = new System.Drawing.Size(57, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Giới tính";
+          
             // 
             // label5
             // 

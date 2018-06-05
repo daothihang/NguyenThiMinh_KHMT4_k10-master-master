@@ -44,7 +44,6 @@
             this.toolStripMenuItem17 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem19 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem20 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem21 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem22 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem23 = new System.Windows.Forms.ToolStripMenuItem();
@@ -149,7 +148,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(3, 13);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(770, 39);
-            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked_1);
             // 
@@ -204,8 +203,7 @@
             // 
             this.toolStripMenuItem18.AutoSize = false;
             this.toolStripMenuItem18.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem19,
-            this.toolStripMenuItem20});
+            this.toolStripMenuItem19});
             this.toolStripMenuItem18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem18.ForeColor = System.Drawing.Color.Black;
             this.toolStripMenuItem18.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem18.Image")));
@@ -220,13 +218,6 @@
             this.toolStripMenuItem19.Size = new System.Drawing.Size(215, 22);
             this.toolStripMenuItem19.Text = "Phân công giảng dạy";
             this.toolStripMenuItem19.Click += new System.EventHandler(this.toolStripMenuItem19_Click);
-            // 
-            // toolStripMenuItem20
-            // 
-            this.toolStripMenuItem20.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem20.Image")));
-            this.toolStripMenuItem20.Name = "toolStripMenuItem20";
-            this.toolStripMenuItem20.Size = new System.Drawing.Size(215, 22);
-            this.toolStripMenuItem20.Text = "Xem phân công giảng dậy";
             // 
             // toolStripMenuItem21
             // 
@@ -275,15 +266,17 @@
             // 
             this.họcSinhToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("họcSinhToolStripMenuItem.Image")));
             this.họcSinhToolStripMenuItem.Name = "họcSinhToolStripMenuItem";
-            this.họcSinhToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.họcSinhToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.họcSinhToolStripMenuItem.Text = "Học Sinh";
+            this.họcSinhToolStripMenuItem.Click += new System.EventHandler(this.họcSinhToolStripMenuItem_Click);
             // 
             // giáoViênToolStripMenuItem
             // 
             this.giáoViênToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("giáoViênToolStripMenuItem.Image")));
             this.giáoViênToolStripMenuItem.Name = "giáoViênToolStripMenuItem";
-            this.giáoViênToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.giáoViênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.giáoViênToolStripMenuItem.Text = "Giáo Viên";
+            this.giáoViênToolStripMenuItem.Click += new System.EventHandler(this.giáoViênToolStripMenuItem_Click);
             // 
             // accountToolStripMenuItem
             // 
@@ -332,7 +325,7 @@
             this.button4.Location = new System.Drawing.Point(19, 133);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(162, 29);
-            this.button4.TabIndex = 3;
+            this.button4.TabIndex = 2;
             this.button4.Text = "Dự kiến lịch học";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
@@ -343,7 +336,7 @@
             this.button3.Location = new System.Drawing.Point(19, 84);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(162, 31);
-            this.button3.TabIndex = 2;
+            this.button3.TabIndex = 1;
             this.button3.Text = "Lịch nghỉ hè";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
@@ -383,7 +376,7 @@
             this.groupBox4.Location = new System.Drawing.Point(12, 223);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(200, 70);
-            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Search";
             // 
@@ -392,7 +385,7 @@
             this.textBox1.Location = new System.Drawing.Point(17, 32);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(137, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBox1.TabIndex = 0;
             // 
             // groupBox5
             // 
@@ -417,7 +410,7 @@
             this.button5.Location = new System.Drawing.Point(53, 9);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(484, 27);
-            this.button5.TabIndex = 6;
+            this.button5.TabIndex = 0;
             this.button5.Text = "Tin Tức";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
@@ -534,7 +527,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem17;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem18;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem19;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem20;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem21;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem22;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem23;

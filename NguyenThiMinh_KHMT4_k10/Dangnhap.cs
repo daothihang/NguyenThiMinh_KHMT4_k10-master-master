@@ -19,7 +19,7 @@ namespace NguyenThiMinh_KHMT4_k10
         LopBUL myLop = new LopBUL();
         private void Form1_Load(object sender, EventArgs e)
         {
-            cboloaitk.DataSource = myCB.LayDsCanBo();
+            cboloaitk.DataSource = myCB.LayLoaiTK();
             cboloaitk.DisplayMember = "LoaiTaiKhoan";
             cboloaitk.ValueMember = "LoaiTaiKhoan";
         }
@@ -40,7 +40,7 @@ namespace NguyenThiMinh_KHMT4_k10
                 {
 
                     this.Hide();
-                    FormGiaoVien maingv = new FormGiaoVien();
+                    FormGiaoVien maingv = new FormGiaoVien(txttendn.Text);
                     maingv.Show();
 
                 }
@@ -57,11 +57,8 @@ namespace NguyenThiMinh_KHMT4_k10
 
         }
 
-        private void cboloaitk_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-          
-        }
+        
+      
 
         private void btncancel_Click(object sender, EventArgs e)
         {
@@ -72,7 +69,7 @@ namespace NguyenThiMinh_KHMT4_k10
         private void Dangnhap_FormClosing(object sender, FormClosingEventArgs e)
         {
 
-
+           
         }
 
     
