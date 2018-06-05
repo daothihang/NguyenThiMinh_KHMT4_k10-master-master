@@ -21,11 +21,12 @@ namespace NguyenThiMinh_KHMT4_k10
         CanBoGiaoVienBUL myCanBoGiaoVien = new CanBoGiaoVienBUL();
         private void Lop_Load(object sender, EventArgs e)
         {
-            dgvLop.AutoGenerateColumns = false;
+           // dgvLop.AutoGenerateColumns = false;
             cbGiaoVienChuNhiem.DataSource = myCanBoGiaoVien.LayDsCanBo();
             cbGiaoVienChuNhiem.DisplayMember = "HoTen";
             cbGiaoVienChuNhiem.ValueMember = "MaCanBoGiaoVien";
-        
+            dgvLop.DataSource = myLop.LayDsLop();
+
         }
 
         private void dgvLop_CellContentClick(object sender, DataGridViewCellEventArgs e)

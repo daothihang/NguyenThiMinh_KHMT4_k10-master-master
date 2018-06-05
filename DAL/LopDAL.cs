@@ -35,7 +35,7 @@ namespace DAL
             KetNoiCoSoDuLieu.DongKetNoi();
             return ds;
         }
-        public bool Them(string MaLop, string TenLop, string NienKhoa,int SiSo,string GiaoVienChuNhiem)
+        public bool Them(string MaLop, string TenLop, string NienKhoa, int SiSo, string GiaoVienChuNhiem)
         {
             try
             {

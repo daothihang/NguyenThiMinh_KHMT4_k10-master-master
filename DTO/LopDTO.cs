@@ -11,18 +11,18 @@ namespace DTO
         public string Malop { get; set; }
         public string Tenlop { get; set; }
         public int SiSo { get; set; }
-        public string NiemKhoa { get; set; }
+        public string NienKhoa { get; set; }
         public string GiaoVienChuNhiem { get; set; }
        
    
         public LopDTO() { }
 
-        public LopDTO(string malop, string tenlop, string niemkhoa, int siso, string gvcn)
+        public LopDTO(string malop, string tenlop, string nienkhoa, int siso, string gvcn)
         {
             this.Malop = malop;
             this.Tenlop = tenlop;
             this.SiSo = siso;
-            this.NiemKhoa = niemkhoa;
+            this.NienKhoa = nienkhoa;
             this.GiaoVienChuNhiem = gvcn;
 
 
