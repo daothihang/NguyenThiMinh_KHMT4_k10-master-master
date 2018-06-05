@@ -1,6 +1,6 @@
 ﻿namespace NguyenThiMinh_KHMT4_k10
 {
-    partial class FormGiaoVien
+    partial class FormGV
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGiaoVien));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGV));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem21 = new System.Windows.Forms.ToolStripMenuItem();
             this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,7 +36,7 @@
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbtengv = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +52,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 30);
-            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripMenuItem21
@@ -64,6 +64,7 @@
             this.toolStripMenuItem21.Name = "toolStripMenuItem21";
             this.toolStripMenuItem21.Size = new System.Drawing.Size(122, 32);
             this.toolStripMenuItem21.Text = "Quản Lý Điểm";
+            this.toolStripMenuItem21.Click += new System.EventHandler(this.toolStripMenuItem21_Click);
             // 
             // tìmKiếmToolStripMenuItem
             // 
@@ -108,25 +109,26 @@
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
-            // label1
+            // lbtengv
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 198);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lbtengv.AutoSize = true;
+            this.lbtengv.Location = new System.Drawing.Point(31, 92);
+            this.lbtengv.Name = "lbtengv";
+            this.lbtengv.Size = new System.Drawing.Size(35, 13);
+            this.lbtengv.TabIndex = 5;
+            this.lbtengv.Text = "label1";
+            this.lbtengv.Visible = false;
             // 
-            // FormGiaoVien
+            // FormGV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbtengv);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "FormGiaoVien";
-            this.Text = "FormGiaoVien";
+            this.Name = "FormGV";
+            this.Text = "QuanLyDiem";
+            this.Load += new System.EventHandler(this.FormGV_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -143,6 +145,6 @@
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbtengv;
     }
 }

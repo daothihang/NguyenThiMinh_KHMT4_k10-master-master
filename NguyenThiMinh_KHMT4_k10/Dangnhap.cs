@@ -40,7 +40,7 @@ namespace NguyenThiMinh_KHMT4_k10
                 {
 
                     this.Hide();
-                    FormGiaoVien maingv = new FormGiaoVien(txttendn.Text);
+                    FormGV maingv = new FormGV(txttendn.Text);
                     maingv.Show();
 
                 }

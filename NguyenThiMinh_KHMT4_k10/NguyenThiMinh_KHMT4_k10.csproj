@@ -88,11 +88,11 @@
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormGiaoVien.cs">
+    <Compile Include="QuanLyDiemGV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormGiaoVien.Designer.cs">
-      <DependentUpon>FormGiaoVien.cs</DependentUpon>
+    <Compile Include="QuanLyDiemGV.Designer.cs">
+      <DependentUpon>QuanLyDiemGV.cs</DependentUpon>
     </Compile>
     <Compile Include="HeThong.cs">
       <SubType>Form</SubType>
@@ -126,6 +126,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGV.Designer.cs">
+      <DependentUpon>FormGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyHocSinhDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -200,8 +206,11 @@
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormGiaoVien.resx">
-      <DependentUpon>FormGiaoVien.cs</DependentUpon>
+    <EmbeddedResource Include="FormGV.resx">
+      <DependentUpon>FormGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyDiemGV.resx">
+      <DependentUpon>QuanLyDiemGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong.dje.resx">
       <DependentUpon>HeThong.cs</DependentUpon>

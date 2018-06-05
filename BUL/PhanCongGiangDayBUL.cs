@@ -49,5 +49,10 @@ namespace BUL
             DataTable dt = myPhanCongDAL.XemDSPhanCongGiangDayTheoGv(TenGv);
             return dt;
         }
+        public DataTable LayLopPhanCongTheoGv(string TaiKhoan)
+        {
+            DataTable dt = myPhanCongDAL.layLopPhanCongTheoGv(TaiKhoan);
+            return dt;
+        }
     }
 }
