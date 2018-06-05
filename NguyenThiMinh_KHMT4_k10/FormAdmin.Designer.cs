@@ -94,11 +94,12 @@
             this.lbtitle.AutoSize = true;
             this.lbtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtitle.ForeColor = System.Drawing.Color.Blue;
-            this.lbtitle.Location = new System.Drawing.Point(339, 138);
+            this.lbtitle.Location = new System.Drawing.Point(261, 138);
             this.lbtitle.Name = "lbtitle";
-            this.lbtitle.Size = new System.Drawing.Size(440, 13);
+            this.lbtitle.Size = new System.Drawing.Size(515, 13);
             this.lbtitle.TabIndex = 3;
-            this.lbtitle.Text = "Chào mừng bạn đến với cổng thông tin điện tử của Trường THCS Quỳnh Côi";
+            this.lbtitle.Text = "Chào Admin! Chào mừng bạn đến với cổng thông tin điện tử của Trường THCS Quỳnh Cô" +
+    "i";
             // 
             // pictureBox1
             // 

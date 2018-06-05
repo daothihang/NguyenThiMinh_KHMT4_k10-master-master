@@ -36,8 +36,8 @@ namespace NguyenThiMinh_KHMT4_k10
 
         private void FormAdmin_Load(object sender, EventArgs e)
         {
-           // timer1.Start();
-            
+            //timer1.Start();
+
         }
 
         private void toolStripMenuItem19_Click(object sender, EventArgs e)

@@ -44,7 +44,8 @@ namespace NguyenThiMinh_KHMT4_k10
 
         private void HeThong_Load(object sender, EventArgs e)
         {
-           // timer1.Start();
+            //timer1.Start();
+            //timer2.Start();
         }
 
         
@@ -73,6 +74,16 @@ namespace NguyenThiMinh_KHMT4_k10
         {
             TinTuc tinTuc = new TinTuc();
             tinTuc.Show();
+        }
+
+        public int y = 10;
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            label1.Location = new Point(label1.Location.X - y, label1.Location.Y);
+            if (label1.Location.X <= 0 - label1.Width || label1.Location.X > this.Width)
+            {
+                label1.Location = new Point(label1.Location.X + 750 + label1.Width, label1.Location.Y);
+            }
         }
     }
 }
