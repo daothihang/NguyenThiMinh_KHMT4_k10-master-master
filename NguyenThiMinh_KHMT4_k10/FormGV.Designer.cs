@@ -112,7 +112,7 @@
             // lbtengv
             // 
             this.lbtengv.AutoSize = true;
-            this.lbtengv.Location = new System.Drawing.Point(31, 92);
+            this.lbtengv.Location = new System.Drawing.Point(12, 43);
             this.lbtengv.Name = "lbtengv";
             this.lbtengv.Size = new System.Drawing.Size(35, 13);
             this.lbtengv.TabIndex = 5;
