@@ -107,5 +107,18 @@ namespace NguyenThiMinh_KHMT4_k10
         {
 
         }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HeThong ht = new HeThong();
+            ht.Show();
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Doi_MK doimk = new Doi_MK();
+            doimk.Show();
+        }
     }
 }

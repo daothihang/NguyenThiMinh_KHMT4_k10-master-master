@@ -54,12 +54,12 @@ namespace DAL
         {
            KetNoiCoSoDuLieu.MoKetNoi();
 
-            String sqlsua = "UPDATE PhanCongGiangDay SET NgayPhanCong=@ngaypc WHERE MaLop=@malop AND MaMon=@mamon AND MaCanBoGiaoVien=@Macbgv";
+            String sqlsua = "UPDATE PhanCongGiangDay SET NgayPhanCong=@ngaypc WHERE MaLop=@malop AND MaMon=@mamon AND MaCanBoGiaoVien=@macbgv";
             SqlCommand cmd = new SqlCommand(sqlsua, KetNoiCoSoDuLieu.KetNoi);
 
             cmd.Parameters.AddWithValue("malop", dto.MaLop);
             cmd.Parameters.AddWithValue("mamon", dto.MaMon);
-            cmd.Parameters.AddWithValue("Macbgv", dto.MaCanBoGiaoVien);
+            cmd.Parameters.AddWithValue("macbgv", dto.MaCanBoGiaoVien);
             cmd.Parameters.AddWithValue("ngaypc", dto.NgayPhanCong);
 
             cmd.ExecuteNonQuery();
@@ -77,30 +77,40 @@ namespace DAL
             return dt;
         }
 
-        public List<PhanCongGiangDayDTO> xemph(string malop,string mamon,string macbgv)
+
+        public DataTable XemDSPhanCongGiangDayTheoTLop(string TenLop)
         {
-            List<PhanCongGiangDayDTO> xem = new List<PhanCongGiangDayDTO>();
+            DataTable dt = new DataTable();
             KetNoiCoSoDuLieu.MoKetNoi();
-            String sqlFind = "select *form PhanCongGiangDay where MaLop=@malop or MaMon=@mamon or MaCanBoGiaoVien=@macbgv";
-            SqlCommand cmd = new SqlCommand(sqlFind, KetNoiCoSoDuLieu.KetNoi);
-            cmd.Parameters.AddWithValue("malop", malop);
-            cmd.Parameters.AddWithValue("mamon", mamon);
-            cmd.Parameters.AddWithValue("macbgv", macbgv);
-            SqlDataReader dr = cmd.ExecuteReader();
-
-            while (dr.Read())
-            {
-                PhanCongGiangDayDTO pcgd = new PhanCongGiangDayDTO(
-                     dr["MaLop"].ToString(),
-                     dr["MaMon"].ToString(),
-                     dr["MaCanBoGiaoVien"].ToString(),
-                     dr["NgayPhanCong"].ToString());
-                xem.Add(pcgd);
-            }
-
+            String sqlFind = string.Format("select MonHoc.MaMon, MonHoc.TenMon,CanBoGiaoVien.MaCanBoGiaoVien, CanBoGiaoVien.HoTen, CanBoGiaoVien.SoDienthoai, PhanCongGiangDay.NgayPhanCong from PhanCongGiangDay inner join CanBoGiaoVien on PhanCongGiangDay.MaCanBoGiaoVien= CanBoGiaoVien.MaCanBoGiaoVien inner join MonHoc on PhanCongGiangDay.MaMon= MonHoc.MaMon inner join Lop on PhanCongGiangDay.MaLop= Lop.MaLop where TenLop like'" + TenLop + "%' ");
+            SqlDataAdapter da = new SqlDataAdapter(sqlFind, KetNoiCoSoDuLieu.KetNoi);
+            da.Fill(dt);
             KetNoiCoSoDuLieu.DongKetNoi();
-            return xem;
+            return dt;
         }
+
+        public DataTable XemDSPhanCongGiangDayTheoMon(string TenMon)
+        {
+            DataTable dt = new DataTable();
+            KetNoiCoSoDuLieu.MoKetNoi();
+            String sqlFind1 = string.Format("select Lop.MaLop,Lop.TenLop,CanBoGiaoVien.MaCanBoGiaoVien, CanBoGiaoVien.HoTen, CanBoGiaoVien.SoDienthoai, PhanCongGiangDay.NgayPhanCong from PhanCongGiangDay inner join CanBoGiaoVien on PhanCongGiangDay.MaCanBoGiaoVien= CanBoGiaoVien.MaCanBoGiaoVien inner join MonHoc on PhanCongGiangDay.MaMon= MonHoc.MaMon inner join Lop on PhanCongGiangDay.MaLop= Lop.MaLop where TenMon like'" + TenMon + "%' ");
+            SqlDataAdapter da = new SqlDataAdapter(sqlFind1, KetNoiCoSoDuLieu.KetNoi);
+            da.Fill(dt);
+            KetNoiCoSoDuLieu.DongKetNoi();
+            return dt;
+        }
+
+        public DataTable XemDSPhanCongGiangDayTheoGv(string TenGV)
+        {
+            DataTable dt = new DataTable();
+            KetNoiCoSoDuLieu.MoKetNoi();
+            String sqlFind2 = string.Format("select Lop.MaLop,Lop.TenLop, MonHoc.MaMon, MonHoc.TenMon, PhanCongGiangDay.NgayPhanCong from PhanCongGiangDay inner join CanBoGiaoVien on PhanCongGiangDay.MaCanBoGiaoVien= CanBoGiaoVien.MaCanBoGiaoVien inner join MonHoc on PhanCongGiangDay.MaMon= MonHoc.MaMon inner join Lop on PhanCongGiangDay.MaLop= Lop.MaLop where HoTen like'" + TenGV + "%' ");
+            SqlDataAdapter da = new SqlDataAdapter(sqlFind2, KetNoiCoSoDuLieu.KetNoi);
+            da.Fill(dt);
+            KetNoiCoSoDuLieu.DongKetNoi();
+            return dt;
+        }
+
 
     }
 }

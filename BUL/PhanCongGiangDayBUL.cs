@@ -34,9 +34,20 @@ namespace BUL
             return dt;
         }
 
-        public List<PhanCongGiangDayDTO> xemds(String malop,String mamon,String macbgv)
+        public DataTable XemDsPhanCongTheoLop(string TenLop)
         {
-            return myPhanCongDAL.xemph(malop,mamon,macbgv);
+            DataTable dt = myPhanCongDAL.XemDSPhanCongGiangDayTheoTLop(TenLop);
+            return dt;
+        }
+        public DataTable XemDsPhanCongTheoMon(string TenMon)
+        {
+            DataTable dt = myPhanCongDAL.XemDSPhanCongGiangDayTheoMon(TenMon);
+            return dt;
+        }
+        public DataTable XemDsPhanCongTheoGv(string TenGv)
+        {
+            DataTable dt = myPhanCongDAL.XemDSPhanCongGiangDayTheoGv(TenGv);
+            return dt;
         }
     }
 }
