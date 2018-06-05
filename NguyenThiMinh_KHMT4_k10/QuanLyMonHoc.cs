@@ -144,5 +144,10 @@ namespace NguyenThiMinh_KHMT4_k10
                 }
             }
         }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

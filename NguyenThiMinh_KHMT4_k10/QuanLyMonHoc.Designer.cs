@@ -52,6 +52,7 @@
             this.btnLuu = new System.Windows.Forms.ToolStripMenuItem();
             this.monHocTableAdapter = new NguyenThiMinh_KHMT4_k10.QuanLyHocSinhDataSet2TableAdapters.MonHocTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monHocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyHocSinhDataSet2)).BeginInit();
@@ -118,9 +119,9 @@
             this.tenMonDataGridViewTextBoxColumn,
             this.soTietDataGridViewTextBoxColumn});
             this.dgvMonHoc.DataSource = this.monHocBindingSource;
-            this.dgvMonHoc.Location = new System.Drawing.Point(252, 143);
+            this.dgvMonHoc.Location = new System.Drawing.Point(223, 143);
             this.dgvMonHoc.Name = "dgvMonHoc";
-            this.dgvMonHoc.Size = new System.Drawing.Size(341, 168);
+            this.dgvMonHoc.Size = new System.Drawing.Size(411, 168);
             this.dgvMonHoc.TabIndex = 8;
             this.dgvMonHoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMonHoc_CellContentClick);
             // 
@@ -161,9 +162,9 @@
             this.groupBox1.Controls.Add(this.txtbTenMon);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtbSoTiet);
-            this.groupBox1.Location = new System.Drawing.Point(12, 33);
+            this.groupBox1.Location = new System.Drawing.Point(0, 33);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(205, 278);
+            this.groupBox1.Size = new System.Drawing.Size(217, 278);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             // 
@@ -176,10 +177,11 @@
             this.btnXoa,
             this.btnXem,
             this.btnHuy,
-            this.btnLuu});
+            this.btnLuu,
+            this.thoátToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(627, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(634, 30);
             this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -195,7 +197,7 @@
             // btnSua
             // 
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Margin = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(54, 26);
             this.btnSua.Text = "Sửa";
@@ -204,7 +206,7 @@
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(55, 26);
             this.btnXoa.Text = "Xóa";
@@ -213,7 +215,7 @@
             // btnXem
             // 
             this.btnXem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXem.Margin = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnXem.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnXem.Name = "btnXem";
             this.btnXem.Size = new System.Drawing.Size(59, 26);
             this.btnXem.Text = "Xem";
@@ -222,7 +224,7 @@
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(55, 26);
             this.btnHuy.Text = "Hủy";
@@ -231,7 +233,7 @@
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(55, 26);
             this.btnLuu.Text = "Lưu";
@@ -244,19 +246,28 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(252, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(223, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(341, 104);
+            this.pictureBox1.Size = new System.Drawing.Size(411, 104);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
+            // 
+            // thoátToolStripMenuItem
+            // 
+            this.thoátToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thoátToolStripMenuItem.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
+            this.thoátToolStripMenuItem.Text = "Thoát";
+            this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
             // QuanLyMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(627, 311);
+            this.ClientSize = new System.Drawing.Size(634, 311);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvMonHoc);
@@ -303,5 +314,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn soTietDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem btnLuu;
+        private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
     }
 }

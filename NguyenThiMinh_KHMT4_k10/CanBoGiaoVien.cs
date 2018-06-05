@@ -147,8 +147,7 @@ namespace NguyenThiMinh_KHMT4_k10
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                Application.Exit();
+            this.Hide();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
